@@ -1,0 +1,23 @@
+Go to the game assignment here:
+https://scratch.mit.edu/projects/165303069/
+
+Ball Shooter v6
+
+
+
+Mouse Click on Play Now Button to Start!! 
+    
+   Use Left,Right,Up,Down Arrow to move the player. 
+   There are just 3 levels increasing speed of ball and target. 
+   Each Level you get to Hit 5 Balls. 
+   Score Evaluation: 
+   Level 1: Goal +20, Missed -5 
+   Level 2: Goal +40 , Missed -10 
+   Level 3: Goal +60, Missed -20 
+   At any point if score is negative, GAME OVER. 
+    
+   Let's see your max score. 
+   There can be many levels by varying the size , speed of target and ball.We can introduce obstacles in between as well.
+
+
+That was week0!.
