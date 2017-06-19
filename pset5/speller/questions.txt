@@ -1,0 +1,55 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is an obscure term ostensibly referring to a lung disease caused by silica dust.
+It is one of the longest words in the English language.
+
+1.  getrusage is used as the following line says:
+getrusage(RUSAGE_SELF, &before);
+
+getrusage returns resource usage measures for the first parameter which is RUSAGE_SELF.
+This means it will return usage statistics for the calling process,which is the sum of resources used by all threads in the process.
+
+The first parameter can be RUSAGE_CHILDREN or RUSAGE_THREAD also.
+
+RUSAGE_CHILDREN means:
+Return  resource  usage statistics for all children of the calling process that have terminated and been waited for.  These statistics will include
+the resources used by grandchildren, and further removed descendants, if all of the intervening descendants waited on their terminated children.
+
+RUSAGE_THREAD means:
+Return resource usage statistics for the calling thread.
+
+
+2.  struct rusage  has 16 members.
+
+
+3.  There are 16 members in the struct rusage, if we pass by value that would waste a lot of memory and time, pass by reference would be best option.
+
+
+4.  main() functions loops over each character in the file text until the end of file.
+Then the control can move to three places, for this there are three conditions:
+
+1st case:
+if condition will check whether the character is alphabet or if it is an apostrophe, it should not be first character of word.
+Now when 1st case is true, control moves to adding the character that was read to the WORD array and doing index++, index stores the count of characters in
+the current word.
+
+It also contains a check that if length of word is >45 , we must move to the next word, and index = 0 again.
+
+
+2nd case:
+If condition will check whether character read is digit, if it is , skip over the numbers and index = 0 for new word.
+
+3rd case:
+Control moves here when the character read is space or some punctuation mark and index >0.This tells we have a word now and we need to check it for misspellings.
+Terminate the current word by using the '\0' character at the end. Word counter is increased.
+Now we will check this word for misspelling using the check function and then move on to check for next word, index = 0.
+
+5.  
+How the program is designed fgetc would be perfect and we check each char one by one.All the conditions are for checking character.
+
+If we use fscanf with %s as specifier, it will read whole word at once, the problems will be :
+1st :  The punctuation mark will also be read with it , it will be difficult to remove it after and check again.
+2nd: If we read a word > 45 at once, it will directly overwrite memory may cause segmentation fault.
+3rd: It will become really tough and complicated to write logic for skipping alpha-number strings and other conditions.
+
+6.  
+check and load are considered const or are declared as pointer to constants, we can't change the data they are pointing to thus it protects 
+the code to not to modify the dictionary and word arguments values.

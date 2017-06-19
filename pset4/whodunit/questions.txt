@@ -1,0 +1,40 @@
+1.  <stdint.h> is a header file in C that helps programmer to specify fixed width integer types, more precisely exact width integer types.
+They are defined using macros and their limits minimum , maximum values are also specified for each type.
+
+2.  By using these we can fix amount of bytes they use and it does not depend upon the systems.Their size same on all systems.This is useful 
+for things like bitmaps.
+
+3.  Size of these: 
+BYTE = 1 byte
+DWORD = 4 bytes
+LONG = 4 bytes
+WORD = 2 bytes
+
+4.  First two bytes are 'B' and 'M' (in ASCII)
+
+5. bfSize is the total size or number of bytes required by the the file which includes biSize.It is total size of the file.
+biSize is the number of bytes required by BITMAPINFOHEADER structure.
+
+6.  If biHeight is negative , this means it is top-down image (vertically) and it starts at upper left corner.
+
+7.  It is biBitCount.
+
+8.  It will return NULL when if infile or outfile are not present that is file not found error.
+
+9. Third agrument in fread is nmemb - Number of members to read of size sizeof(BITMAPFILEHEADER) or sizeof(BITMAPINFOHEADER or sizeof(RGBTRIPLE), as we always have one member or one struct to read.  
+This is why it is always set to 1.
+
+10. biwidth = 3
+sizeof(RGBTRIPLE) = 3
+Then equation will be ,
+int padding =  (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
+=(4 - (9) % 4) % 4
+= 3
+Thus padding will be 3.
+
+11. 
+fseek sets the file position indicator to a specific postion in the file.
+
+12. 
+It is a constant which when used means offset provided is relative to the current file position.
+   

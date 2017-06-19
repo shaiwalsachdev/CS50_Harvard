@@ -1,0 +1,8 @@
+0. Besides 4 x 4, Other dimensions that framework allow are 3 x 3 , 5 x 5 , 6 x 6,7 x 7,8 x 8  and 9 x 9.
+Min and Max values for dimension are set to be 3 and 9 respectively.
+
+1. Game Board is represented using a 2-D Array (Two Dimensional)
+
+2. greet();  // greet function is called
+
+3. init,draw,move,won are four functions to be implemented.
