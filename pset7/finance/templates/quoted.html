@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <table>
+    {% for item in result %}
+   <tr>
+        <th> {{ item[0] }} </th>
+        <td> {{ item[1] }} </td>
+   </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
