@@ -1,0 +1,232 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}
+    My Profile - Shaiwal Sachdev
+{% endblock %}
+
+
+{% block content %}
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+		  <div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa-user-md"></i>Shaiwal Sachdev</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="index.html">Foodiez</a></li>
+						<li><i class="fa fa-user-md"></i>My Profile</li>
+					</ol>
+				</div>
+			</div>
+              <div class="row">
+                <!-- profile-widget -->
+                <div class="col-lg-12">
+                    <div class="profile-widget profile-widget-info">
+                          <div class="panel-body">
+                            <div class="col-lg-2 col-sm-2">
+                              <h4>Shaiwal Sachev</h4>               
+                              <div class="follow-ava">
+                                  <img src="static/dashboard/img/shaiwal1.jpg" alt="">
+                              </div>
+                              <h6>Food Lover <3</h6>
+                            </div>
+                            
+                            <div class="col-lg-4 col-sm-4 follow-info">
+                                <p>Hello I’m Shaiwal Sachdev, a Food addict.</p>
+								<p><i class="fa fa-twitter">shaiwalsachdev</i></p>
+                                
+                            </div>
+                            <div class="col-lg-2 col-sm-6 follow-info weather-category">
+                                      <ul>
+                                          <li class="active">
+                                             <i class="fa fa-cutlery"> </i><br>
+											  
+											  Love Chinese Food!!
+                                          </li>
+										   
+                                      </ul>
+                            </div>
+							<div class="col-lg-2 col-sm-6 follow-info weather-category">
+                                      <ul>
+                                          <li class="active">
+                                              
+                                              <i class="fa fa-tachometer fa-2x"> </i><br>
+											     Foodometer (96%)
+                                          </li>
+										   
+                                      </ul>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+              </div>
+              <!-- page start-->
+              
+              <div class="row">
+                 <div class="col-lg-12">
+                    <section class="panel">
+                          <header class="panel-heading tab-bg-info">
+                              <ul class="nav nav-tabs">
+                                  <li>
+                                      <a data-toggle="tab" href="#profile">
+                                          <i class="icon-user"></i>
+                                          Profile
+                                      </a>
+                                  </li>
+                                  <li class="">
+                                      <a data-toggle="tab" href="#edit-profile">
+                                          <i class="icon-envelope"></i>
+                                          Edit Profile
+                                      </a>
+                                  </li>
+                              </ul>
+                          </header>
+                          <div class="panel-body">
+                              <div class="tab-content">
+                                  <!-- profile -->
+                                  <div id="profile" class="tab-pane">
+                                    <section class="panel">
+                                      <div class="panel-body bio-graph-info">
+                                          <h1>Bio Graph</h1>
+                                          <div class="row">
+                                              <div class="bio-graph-heading">
+                                                Hello I’m Shaiwal Sachdev, Love Spicy Food! Chinese,Italian Lover !!
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>First Name </span>: Shaiwal </p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Last Name </span>: Sachdev</p>
+                                              </div>                                              
+                                              <div class="bio-row">
+                                                  <p><span>Birthday</span>: 1 January 1996</p>
+                                              </div>
+                                               <div class="bio-row">
+                                                  <p><span>Type Of Food</span>: Veg</p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Favourite Cuisine</span>: Indian</p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Favourite Dishes</span>: Palak Paneer,Poha</p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Country </span>: India</p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Occupation </span>: Software Engineer</p>
+                                              </div>
+                                              <div class="bio-row">
+                                                  <p><span>Email </span>:shaiwalsachdev80008@gmail.com</p>
+                                              </div>
+                                              
+                                              <div class="bio-row">
+                                                  <p><span>Mobile </span>: (+91) 9999755223</p>
+                                              </div>
+                                              
+                                             
+                                          </div>
+                                      </div>
+                                    </section>
+                                      <section>
+                                          <div class="row">                                              
+                                          </div>
+                                      </section>
+                                  </div>
+                                  <!-- edit-profile -->
+                                  <div id="edit-profile" class="tab-pane">
+                                    <section class="panel">                                          
+                                          <div class="panel-body bio-graph-info">
+                                              <h1> Profile Info</h1>
+                                              <form class="form-horizontal" role="form">                                                  
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">First Name</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="f-name" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Last Name</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="l-name" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Birthday</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="b-day" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                            <label class="control-label col-lg-2">Type of Food</label>
+                                            <div class="col-lg-10">                               
+                                                <select class="form-control">
+                                                  <option value="">- Choose Cateogry -</option>
+                                                  <option value="1">Veg</option>
+                                                  <option value="2">NonVeg</option>
+                                                  <option value="3">Egg</option>
+                                                </select>  
+                                            </div>
+                                          </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Favourite Cuisine</label>
+                                                      <div class="col-lg-10">
+                                                          <textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Favourite Dishes</label>
+                                                      <div class="col-lg-10">
+                                                          <textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
+                                                      </div>
+                                                  </div>
+                                                  
+                                                  
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Country</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="c-name" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                  
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Occupation</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="occupation" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Email</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="email" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="col-lg-2 control-label">Mobile</label>
+                                                      <div class="col-lg-6">
+                                                          <input type="text" class="form-control" id="mobile" placeholder=" ">
+                                                      </div>
+                                                  </div>
+                                                 
+
+                                                  <div class="form-group">
+                                                      <div class="col-lg-offset-2 col-lg-10">
+                                                          <button type="submit" class="btn btn-primary">Save</button>
+                                                          <button type="button" class="btn btn-danger">Cancel</button>
+                                                      </div>
+                                                  </div>
+                                              </form>
+                                          </div>
+                                      </section>
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                 </div>
+              </div>
+
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+{% endblock %}

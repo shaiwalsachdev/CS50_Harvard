@@ -1,0 +1,80 @@
+{% extends "dashboard_base.html" %}
+
+{% block title %}
+    Add Food You Ate
+{% endblock %}
+
+{% block content %}
+  <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+		  <div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa-files-o"></i> Food Item</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href=""></a>Foodiez</li>
+						<li><i class="icon_document_alt"></i>Add</li>
+						<li><i class="fa fa-files-o"></i>Food Item</li>
+					</ol>
+				</div>
+			</div>
+              <!-- Form validations -->              
+              <div class="row">
+                  <div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              Food Item
+                          </header>
+                          <div class="panel-body">
+                              <div class="form">
+                                  <form class="form-validate form-horizontal" id="feedback_form" method="get" action="">
+                                      <div class="form-group ">
+                                          <label for="cname" class="control-label col-lg-2">Item Name <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="form-group ">
+                                          <label for="cname" class="control-label col-lg-2">Item Descrption <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input class="form-control" id="desc" name="desc" minlength="5" type="text" required />
+                                          </div>
+                                      </div>
+                                      <div class="form-group ">
+                                          <label for="cname" class="control-label col-lg-2">Price <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input class="form-control" id="Price" name="desc" minlength="5" type="text" required />
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="form-group">
+                                            <label class="control-label col-lg-2">Type</label>
+                                            <div class="col-lg-10">                               
+                                                <select class="form-control">
+                                                  <option value="">- Choose Cateogry -</option>
+                                                  <option value="1">Indian</option>
+                                                  <option value="2">Chinese</option>
+                                                  <option value="3">Mexican</option>
+                                                  <option value="4">Italian</option>
+                                                </select>  
+                                            </div>
+                                          </div>
+                                      <div class="form-group">
+                                          <div class="col-lg-offset-2 col-lg-10">
+                                              <button class="btn btn-primary" type="submit">Add It</button>
+                                             
+                                          </div>
+                                      </div>
+                                  </form>
+                              </div>
+
+                          </div>
+                      </section>
+                  </div>
+              </div>
+              
+              <!-- page end-->
+          </section>
+      </section>
+{% endblock %}

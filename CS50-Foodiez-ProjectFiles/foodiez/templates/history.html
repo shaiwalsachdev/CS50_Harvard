@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Status of Shares
+{% endblock %}
+
+{% block main %}
+    <table style="width:100%">
+  <tr>
+    <th>Symbol</th>
+    <th>Shares</th>
+    <th>FullName</th>
+    <th>Price</th>
+    <th>Time</th>
+  </tr>
+    {% for row in net_evaluation.items() %}
+      <tr>
+     <td> {{ row[1]['symbol'] }}</td>
+     <td> {{ row[1]['shares'] }}</td>
+     <td> {{ row[1]['name'] }}</td>
+     <td> {{ row[1]['price'] }}</td>
+     <td> {{ row[1]['Time'] }}</td>
+     </tr>
+     {% endfor %}
+</table>
+
+{% endblock %}

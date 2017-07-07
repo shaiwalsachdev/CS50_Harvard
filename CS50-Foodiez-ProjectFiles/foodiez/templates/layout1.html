@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Foodiez: {% block title %}{% endblock %}</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="static/foodiez.ico">
+<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css" media="all" />
+<script src="static/js/jquery-1.8.0.min.js"></script>
+<!--[if lt IE 9]><script src="js/modernizr.custom.js"></script><![endif]-->
+<script src="static/js/jquery.flexslider-min.js"></script>
+<script src="static/js/functions.js"></script>
+
+</head>
+<body>
+<!-- wrapper -->
+<div id="wrapper">
+  <!-- header -->
+  <div class="header">
+    <!-- shell -->
+    <div class="shell">
+      <h1 id="logo"><a href="{{ url_for('index') }}">cafe</a></h1>
+      
+      
+      
+      <!-- header-right -->
+      <div class="header-right">
+          <div class="testimonials">
+        <div class="testimonials-slider flexslider">
+          <ul class="slides">
+            <li>
+              <h4>“Best Food Website!”</h4>
+              <div class="rating"> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#" class="active"></a> </div>
+              <p> - Anurag</p>
+              <div class="cl">&nbsp;</div>
+            </li>
+            <li>
+              <h4>"Rated Top in the World!"</h4>
+              <div class="rating"> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#"></a> <a href="#"></a> </div>
+              <p> - Anu Malik, Teacher</p>
+              <div class="cl">&nbsp;</div>
+            </li>
+            <li>
+              <h4>"Recipe wise review system ! Wow!"</h4>
+              <div class="rating"> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#" class="active"></a> <a href="#"></a> </div>
+              <p> - Shashank</p>
+              <div class="cl">&nbsp;</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <div class="subscribe"> <a href="#"><span></span>Subscribe</a> </div>
+        <div class="socials"> <a href="#" class="facebook-ico">facebook</a> <a href="#" class="twitter-ico">twitter</a> </div>
+        <div class="cl">&nbsp;</div>
+      </div>
+      
+      
+      
+      <div class="cl">&nbsp;</div>
+      <!-- end of header -->
+      
+      <!-- navigation -->
+      <nav id="navigation">
+        <ul>
+        <li><a href="{{ url_for('dishes') }}">Dishes</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      
+      <!-- end of navigation -->
+    <div class="slider-holder"> <span class="left"></span> <span class="right"></span>
+      {% block content %}{% endblock %}
+    </div>
+    </div>
+    <!-- end of shell -->
+  </div>
+  <!-- end of header -->
+  
+  
+  <main>
+    {% block main %}{% endblock %}
+    </main>
+  
+  
+  
+  <div id="footer-push"></div>
+  <!-- end of wrapper -->
+</div>
+
+<div id="footer">
+  <div class="shell">
+    <div class="footer-nav">
+      <ul>
+        <li><a href="{{ url_for('index') }}">Foodiez</a></li>
+        
+        <li><a href="{{ url_for('dishes') }}">Dishes</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      
+    </div>
+    <p class="copy">@ Geekdonsignals</p>
+  </div>
+</div>
+</body>
+</html>

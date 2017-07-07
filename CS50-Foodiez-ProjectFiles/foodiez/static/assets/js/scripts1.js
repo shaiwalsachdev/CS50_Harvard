@@ -1,0 +1,87 @@
+
+jQuery(document).ready(function() {
+	
+    /*
+        Fullscreen background
+    */
+    $.backstretch("static/assets/img/backgrounds/1_1.jpg");
+    
+    /*
+        Change Pwd form validation
+    */
+    $('.changepwd-form input[type="text"], .changepwd-form input[type="password"]').on('focus', function() {
+    	$(this).removeClass('input-error');
+    });
+    
+    $('.changepwd-form').on('submit', function(e) {
+    	
+    	$(this).find('input[type="text"], input[type="password"]').each(function(){
+    		if( $(this).val() == "" ) {
+    			e.preventDefault();
+    			$(this).addClass('input-error');
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+    	if ($('#changepwd input[name=form-password]').val() != $('#changepwd input[name=form-password1]').val()) 
+        {
+            alert('passwords don\'t match');
+            return false;
+        }
+    	
+    });
+    
+    /*
+        Registration form validation
+    */
+    $('.registration-form input[type="text"]').on('focus', function() {
+    	$(this).removeClass('input-error');
+    });
+    
+    $('.registration-form').on('submit', function(e) {
+    	
+    	$(this).find('input[type="text"]').each(function(){
+    		if( $(this).val() == "" ) {
+    			e.preventDefault();
+    			$(this).addClass('input-error');
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+    	
+    	$(this).find('input[type="password"]').each(function(){
+    		if( $(this).val() == "" ) {
+    			e.preventDefault();
+    			$(this).addClass('input-error');
+    		}
+    		else {
+    			$(this).removeClass('input-error');
+    		}
+    	});
+    	
+    	if ($('#registration input[name=form-password]').val() != $('#registration input[name=form-password1]').val()) 
+        {
+            alert('passwords don\'t match');
+            return false;
+        }
+        
+        
+        var email = $('#registration input[name=form-email]').val()  
+        
+        if(!email.includes(".com"))
+        {
+            alert('invalid email');
+            return false;
+        }
+        
+        if(!email.includes("@"))
+        {
+            alert('invalid email');
+            return false;
+        }
+    });
+    
+    
+});
